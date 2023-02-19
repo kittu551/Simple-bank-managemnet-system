@@ -1,10 +1,10 @@
 #Bank management System
-
+# importing modules
 import pickle
 import os
 
 class Customer:
-  def __init__(self,A):
+  def __init__(self,A): #defining constructor
     self.name=input("Enter Name: ")
     self.type=input("Type of Account s/c?: ")
     self.amount=int(input("Enter Amount: "))
@@ -14,13 +14,13 @@ class Customer:
           print("Min 5000 required")
           self.amount=int(input("Please Enter amount again: "))
         else:
-          break
+          break #if bal is less than 5000 it exists from the program
       if self.type=='c':
         if self.amount<2000:
           print("Min 2000 required")
           self.amount=int(input("Please Enter amount again: "))
         else:
-          break
+          break #if bal is less than 2000 it exists from the program
     self.accountNo=A
     print("Your Account No. is:",self.accountNo)
 
